@@ -1,0 +1,5 @@
+.vercel
+.pnpm
+node_modules
+*-lock.yaml
+DS_store
