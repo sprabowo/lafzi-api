@@ -21,7 +21,8 @@ module.exports = (req, res) => {
         }
         message.data = data.slice(offset, limit);
       }
-      res.setHeader('Cache-Control', 's-maxage=2628000')
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Cache-Control', 's-maxage=2628000');
       res.status(200).json(message);
     });
   } catch (error) {
