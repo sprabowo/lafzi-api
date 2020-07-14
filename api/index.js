@@ -19,7 +19,7 @@ module.exports = (req, res) => {
           current_page: page,
           total_page: Math.ceil(data.length / limit)
         }
-        message.data = data.slice(offset, limit);
+        message.data = data.slice(offset, offset + limit);
       }
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Cache-Control', 's-maxage=2628000');
