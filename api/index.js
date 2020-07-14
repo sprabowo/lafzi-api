@@ -2,7 +2,7 @@ const Lafzi = require("lafzi.js");
 
 module.exports = (req, res) => {
   const { q = '', page = 1, limit = 10 } = req.query;
-  const offset = (page - 1) * 10;
+  const offset = (page - 1) * limit;
   const message = {
     api_code: 200,
     status: 'success',
